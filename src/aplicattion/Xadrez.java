@@ -1,10 +1,12 @@
 package aplicattion;
 
+import jogo_tabuleiro.Posicao;
+
 public class Xadrez {
 
 	public static void main(String[] args) {
-		System.out.println("Hello !!!! ");
-
+		 Posicao pos=new Posicao(3, 4);
+		 System.out.println(pos);
 	}
 
 }
