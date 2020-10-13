@@ -1,5 +1,12 @@
 package jogo_tabuleiro;
 
-public class TabuleiroExcecao {
+public class TabuleiroExcecao extends RuntimeException  {
+	private static final long serialVersionUID = 1L;
 
+	public TabuleiroExcecao(String msg) {
+		super(msg);
+		
+	}
+
+	
 }
