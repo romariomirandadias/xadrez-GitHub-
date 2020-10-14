@@ -1,7 +1,7 @@
 package jogo_xadrez;
 
 import jogo_tabuleiro.Tabuleiro;
-import jogo_xadrez.pecas.Rei;
+
 import jogo_xadrez.pecas.Torre;;
 
 public class PartidaXadrez {
@@ -30,8 +30,18 @@ private void colocarNovaPeca(char coluna ,int linha ,PecaXadrez peca) {
 	tabuleiro.colocarPeca(peca, new PosicaoXadrez(coluna,linha).posicionar());
 }
 	private void iniciarPartida() {
-		colocarNovaPeca('b',6,new Torre(tabuleiro, Cor_da_peca.Branca));
-		colocarNovaPeca('e',8,new Rei(tabuleiro, Cor_da_peca.Preta));
-		colocarNovaPeca('e',1,new Rei(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('c', 1, new Torre(tabuleiro, Cor_da_peca.Branca));
+		colocarNovaPeca('c', 2, new Torre(tabuleiro, Cor_da_peca.Branca));
+		colocarNovaPeca('d', 2, new Torre(tabuleiro, Cor_da_peca.Branca));
+		colocarNovaPeca('e', 2, new Torre(tabuleiro, Cor_da_peca.Branca));
+		colocarNovaPeca('e', 1, new Torre(tabuleiro, Cor_da_peca.Branca));
+		colocarNovaPeca('d', 1, new Torre(tabuleiro, Cor_da_peca.Branca));
+
+		colocarNovaPeca('c', 7, new Torre(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('c', 8, new Torre(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('d', 7, new Torre(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('e', 7, new Torre(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('e', 8, new Torre(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('d', 8, new Torre(tabuleiro, Cor_da_peca.Preta));
 	}
-}
+	}
