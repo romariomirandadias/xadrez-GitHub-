@@ -3,7 +3,7 @@ package jogo_xadrez;
 import jogo_tabuleiro.Tabuleiro;
 import jogo_tabuleiro.Peca;
 
-public class PecaXadrez extends Peca {
+public abstract class PecaXadrez extends Peca {
 
 	private Cor_da_peca cor;
 
@@ -15,4 +15,6 @@ public class PecaXadrez extends Peca {
 	public Cor_da_peca getCor() {
 		return cor;
 	}
+
+	
 }
