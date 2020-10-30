@@ -14,7 +14,7 @@ public class Torre extends PecaXadrez {
 	//Rook-> Torre -> T
 	@Override
 	public String toString() {
-		return "R";
+		return "T";
 	}
 	@Override
 	public boolean[][] movimentosPossiveis() {
