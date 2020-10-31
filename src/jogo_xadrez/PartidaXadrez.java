@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import jogo_tabuleiro.Peca;
 import jogo_tabuleiro.Posicao;
 import jogo_tabuleiro.Tabuleiro;
+import jogo_xadrez.pecas.Peao;
 import jogo_xadrez.pecas.Rei;
 import jogo_xadrez.pecas.Torre;;
 
@@ -163,7 +164,8 @@ public class PartidaXadrez {
 		if (!testarXeque(cor)) {
 			return false;
 		}
-		List<Peca> list = pecasNoTabuleiro.stream().filter(x ->((PecaXadrez)x).getCor() == cor).collect(Collectors.toList());
+		List<Peca> list = pecasNoTabuleiro.stream().filter(x -> ((PecaXadrez) x).getCor() == cor)
+				.collect(Collectors.toList());
 		for (Peca p : list) {
 			boolean[][] mat = p.movimentosPossiveis();
 			for (int i = 0; i < tabuleiro.getLinhas(); i++) {
@@ -190,10 +192,27 @@ public class PartidaXadrez {
 	}
 
 	private void iniciarPartida() {
-		colocarNovaPeca('h', 7, new Torre(tabuleiro, Cor_da_peca.Branca));
-		colocarNovaPeca('d', 1, new Torre(tabuleiro, Cor_da_peca.Branca));
+		colocarNovaPeca('a', 1, new Torre(tabuleiro, Cor_da_peca.Branca));
 		colocarNovaPeca('e', 1, new Rei(tabuleiro, Cor_da_peca.Branca));
-		colocarNovaPeca('b', 8, new Torre(tabuleiro, Cor_da_peca.Preta));
-		colocarNovaPeca('a', 8, new Rei(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('h', 1, new Torre(tabuleiro, Cor_da_peca.Branca));
+		colocarNovaPeca('a', 2, new Peao(tabuleiro, Cor_da_peca.Branca));
+		colocarNovaPeca('b', 2, new Peao(tabuleiro, Cor_da_peca.Branca));
+		colocarNovaPeca('c', 2, new Peao(tabuleiro, Cor_da_peca.Branca));
+		colocarNovaPeca('d', 2, new Peao(tabuleiro, Cor_da_peca.Branca));
+		colocarNovaPeca('e', 2, new Peao(tabuleiro, Cor_da_peca.Branca));
+		colocarNovaPeca('f', 2, new Peao(tabuleiro, Cor_da_peca.Branca));
+		colocarNovaPeca('g', 2, new Peao(tabuleiro, Cor_da_peca.Branca));
+		colocarNovaPeca('h', 2, new Peao(tabuleiro, Cor_da_peca.Branca));
+		colocarNovaPeca('a', 8, new Torre(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('e', 8, new Rei(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('h', 8, new Torre(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('a', 7, new Peao(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('b', 7, new Peao(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('c', 7, new Peao(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('d', 7, new Peao(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('e', 7, new Peao(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('f', 7, new Peao(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('g', 7, new Peao(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('h', 7, new Peao(tabuleiro, Cor_da_peca.Preta));
 	}
 }
