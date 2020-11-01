@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import jogo_tabuleiro.Peca;
 import jogo_tabuleiro.Posicao;
 import jogo_tabuleiro.Tabuleiro;
+import jogo_xadrez.pecas.Bispo;
 import jogo_xadrez.pecas.Peao;
 import jogo_xadrez.pecas.Rei;
 import jogo_xadrez.pecas.Torre;;
@@ -76,9 +77,11 @@ public class PartidaXadrez {
 
 		if (testarXequeMate(oponente(jogadorAtual))) {
 			xequeMate = true;
-		} else {
+		} 
+		else {
 			proximoTurno();
 		}
+		proximoTurno();
 		return (PecaXadrez) capturarPeca;
 	}
 
@@ -193,7 +196,9 @@ public class PartidaXadrez {
 
 	private void iniciarPartida() {
 		colocarNovaPeca('a', 1, new Torre(tabuleiro, Cor_da_peca.Branca));
+		colocarNovaPeca('c', 1, new Bispo(tabuleiro, Cor_da_peca.Branca));
 		colocarNovaPeca('e', 1, new Rei(tabuleiro, Cor_da_peca.Branca));
+		colocarNovaPeca('f', 1, new Bispo(tabuleiro, Cor_da_peca.Branca));
 		colocarNovaPeca('h', 1, new Torre(tabuleiro, Cor_da_peca.Branca));
 		colocarNovaPeca('a', 2, new Peao(tabuleiro, Cor_da_peca.Branca));
 		colocarNovaPeca('b', 2, new Peao(tabuleiro, Cor_da_peca.Branca));
@@ -204,7 +209,9 @@ public class PartidaXadrez {
 		colocarNovaPeca('g', 2, new Peao(tabuleiro, Cor_da_peca.Branca));
 		colocarNovaPeca('h', 2, new Peao(tabuleiro, Cor_da_peca.Branca));
 		colocarNovaPeca('a', 8, new Torre(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('c', 8, new Bispo(tabuleiro, Cor_da_peca.Preta));
 		colocarNovaPeca('e', 8, new Rei(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('f', 8, new Bispo(tabuleiro, Cor_da_peca.Preta));
 		colocarNovaPeca('h', 8, new Torre(tabuleiro, Cor_da_peca.Preta));
 		colocarNovaPeca('a', 7, new Peao(tabuleiro, Cor_da_peca.Preta));
 		colocarNovaPeca('b', 7, new Peao(tabuleiro, Cor_da_peca.Preta));
