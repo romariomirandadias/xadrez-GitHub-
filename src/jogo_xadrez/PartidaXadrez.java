@@ -10,6 +10,7 @@ import jogo_tabuleiro.Tabuleiro;
 import jogo_xadrez.pecas.Bispo;
 import jogo_xadrez.pecas.Cavalo;
 import jogo_xadrez.pecas.Peao;
+import jogo_xadrez.pecas.Rainha;
 import jogo_xadrez.pecas.Rei;
 import jogo_xadrez.pecas.Torre;;
 
@@ -199,6 +200,7 @@ public class PartidaXadrez {
 		colocarNovaPeca('a', 1, new Torre(tabuleiro, Cor_da_peca.Branca));
 		colocarNovaPeca('b', 1, new Cavalo(tabuleiro, Cor_da_peca.Branca));
 		colocarNovaPeca('c', 1, new Bispo(tabuleiro, Cor_da_peca.Branca));
+		colocarNovaPeca('d', 1, new Rainha(tabuleiro, Cor_da_peca.Branca));
 		colocarNovaPeca('e', 1, new Rei(tabuleiro, Cor_da_peca.Branca));
 		colocarNovaPeca('f', 1, new Bispo(tabuleiro, Cor_da_peca.Branca));
 		colocarNovaPeca('g', 1, new Cavalo(tabuleiro, Cor_da_peca.Branca));
@@ -214,6 +216,7 @@ public class PartidaXadrez {
 		colocarNovaPeca('a', 8, new Torre(tabuleiro, Cor_da_peca.Preta));
 		colocarNovaPeca('b', 8, new Cavalo(tabuleiro, Cor_da_peca.Preta));
 		colocarNovaPeca('c', 8, new Bispo(tabuleiro, Cor_da_peca.Preta));
+		colocarNovaPeca('d', 8, new Rainha(tabuleiro, Cor_da_peca.Preta));
 		colocarNovaPeca('e', 8, new Rei(tabuleiro, Cor_da_peca.Preta));
 		colocarNovaPeca('f', 8, new Bispo(tabuleiro, Cor_da_peca.Preta));
 		colocarNovaPeca('g', 8, new Cavalo(tabuleiro, Cor_da_peca.Preta));
