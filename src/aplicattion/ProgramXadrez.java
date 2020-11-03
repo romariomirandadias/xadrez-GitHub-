@@ -42,6 +42,13 @@ public class ProgramXadrez {
 			}
 			
 			System.out.println(capturarPeca);
+			
+			if(partidaXadrez.getPromocao()!=null) {
+				System.out.print("Entre com a peça a ser promovida(B/C/R/T) : ");
+				String tipo=sc.nextLine();
+				partidaXadrez.trocarPromocaoPeca(tipo);
+			}
+			
 			}
 			catch (XadrezExcecao e) {
 				System.out.println(e.getMessage());
